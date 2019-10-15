@@ -100,8 +100,17 @@ console.log(`Challenge 4: ${ticketPriceTotal}`);
 
 // Problem 1: The 5k is selling the entrants' anonymized meta data for EVIL PROFIT.  
 // Provide an array that removes their names from array:
-
-
+let anonymizedData = runners.map(function(runner){
+  return {
+    id: runner.id,
+    email: runner.email,
+    shirt_size: runner.shirt_size, 
+    company_name: runner.company_name,
+    donation: runner.donation
+  }
+});
+// console.log(`Challenge 5: ${anonymizedData}`);
+console.log(anonymizedData)
 
 // Problem 2
 
