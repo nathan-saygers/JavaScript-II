@@ -4,6 +4,24 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function philharmonic(orchestraName){
+  console.log(`${orchestraName} is a worldclass orchestra`)
+  function strings(stringSection){
+    const group1 = 'Cellos'
+    const group2 = 'Violins'
+    const group3 = 'Violas'
+    const group4 = 'basses'
+    console.log(`The ${stringSection} is composed of ${group1}, ${group2}, ${group3}, and ${group4}`)
+    function stringsSubsection(subsection){
+      console.log(`The ${subsection} are the best of the strings.`)
+    } // closes cellos
+    stringsSubsection('Cellos')
+  } // closes strings
+  strings('The Strings')
+} // closes philharmonic
+philharmonic('The London Philharmonic')
+
+console.log('helloworld');
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
