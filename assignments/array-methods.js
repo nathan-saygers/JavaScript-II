@@ -112,6 +112,24 @@ let anonymizedData = runners.map(function(runner){
 // console.log(`Challenge 5: ${anonymizedData}`);
 console.log(anonymizedData)
 
-// Problem 2
+// Problem 2: add a race time to the data set.  Everyone ran it in 20:00 minutes.  
 
-// Problem 3
+let racersPlusTimes = runners.map(function(runner){
+  let runnerCopy = {...runner};
+  runnerCopy.raceTime = '20:00';
+  return runnerCopy;
+});
+
+// console.log("racers plus time", racersPlusTimes[0]);
+// console.log("original", runners[0]);
+
+// Problem 3:  return an array where each object is a single key value pair.  
+// Key: first name , Value: catchphrase
+
+let catchPhraseArray = runners.map(function(runner){
+    return {
+      [runner.first_name]: `sup, ${runner.last_name} magilicutty?`
+    }
+});
+
+console.log('Sup, Magilicutty', catchPhraseArray);
